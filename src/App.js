@@ -18,13 +18,20 @@ const App = () => {
   useEffect(() => {
     fetchAdvice();
   }, [])
+  const handelAdvice = () => {
+    fetchAdvice()
+  }
   return (
     <div className="app">
       <div className="card">
         <h1 className="heading">
           {advice}
         </h1>
+
       </div>
+      <button className='button' onClick={handelAdvice}>
+        Get New <span>Advice</span>
+      </button>
     </div>
   );
 }
